@@ -190,7 +190,7 @@ GCODE.gCodeReader = (function(){
             model = [];
             z_heights = [];
             detectSlicer(reader.target.result);
-            lines = reader.target.result.split(/\n/);
+            lines = reader.target.result.split(/[\r\n]+/g);
             reader.target.result = null;
 //            prepareGCode();
 
